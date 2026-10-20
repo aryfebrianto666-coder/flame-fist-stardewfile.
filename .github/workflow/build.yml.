@@ -1,0 +1,23 @@
+
+name: Build Flame Fist
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add build environment
+        uses: Pathoschild/SMAPI-ModBuildWorkflow/add-build-environment@v1
+
+      - name: Build mods
+        run: dotnet build --configuration Release
+
+      - name: Upload mod ZIPs
+        uses: Pathoschild/SMAPI-ModBuildWorkflow/upload-release-artifacts@v1
