@@ -1,0 +1,9 @@
+{
+  "Name": "Flame Fist",
+  "Author": "Community Mod",
+  "Version": "0.1.0",
+  "Description": "Adds a fast, high-damage fire-themed melee weapon prototype.",
+  "UniqueID": "Community.FlameFist",
+  "EntryDll": "FlameFist.dll",
+  "MinimumApiVersion": "4.0.0"
+}
